@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 10px 0px;
+  background-color: rgb(20, 20, 20);
+}
+.task-adder {
+  display: flex;
+  width: 800px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(40, 40, 40);
+  filter: drop-shadow(0px 0px 5px #ff3f3f);
+}
+.task-adder .input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ff3f3f;
+  background-color: transparent;
+}
+.task-adder .input:focus {
+  outline: none;
+}
+.task-adder .submit {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ff3f3f;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.task-adder .submit:hover {
+  border-color: transparent;
+  filter: drop-shadow(4px 4px 2px #ff3f3f);
+}
+.task-viewer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  width: 800px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: rgb(40, 40, 40);
+  filter: drop-shadow(0px 0px 5px #ff3f3f);
+}
+.task-viewer .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #ff3f3f;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.task-viewer .task:not(:last-child) {
+  margin-bottom: 10px;
+}
+.task-viewer .task p {
+  margin-right: 15px;
+}
+.task-viewer .task .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  min-width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #ff3f3f;
+  transition: 0.3s;
+}
+.task-viewer .task .delete:hover {
+  background-color: #ff3f3f;
+}
+.task-viewer .task.done {
+  opacity: 0.2;
+}
+.task-viewer .task:hover {
+  opacity: 0.5;
+}
+@media (max-width: 850px) {
+  .task-adder {
+    width: 500px;
+  }
+  .task-viewer {
+    width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .task-adder {
+    width: 300px;
+  }
+  .task-viewer {
+    width: 300px;
+  }
+  .task-adder .input {
+    width: 100px;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .task-adder .submit {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .task-viewer .task p {
+    font-size: 15px;
+  }
+  .task-viewer .task .delete {
+    min-width: 50px;
+    font-size: 15px;
+  }
+}
